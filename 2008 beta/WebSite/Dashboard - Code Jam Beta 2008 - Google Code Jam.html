@@ -1,0 +1,694 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="refresh" content="172795">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>
+    Dashboard - Code Jam Beta 2008 - Google Code Jam
+  </title>
+  <link rel="stylesheet" type="text/css" href="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/base.css">
+  <link rel="stylesheet" type="text/css" href="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/dashboard.css">
+  
+  <script src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/ga.js" async="" type="text/javascript"></script><script type="text/javascript" src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/Dashboard_en.js"></script>
+  
+  <script type="text/javascript"><!--
+    /**
+     * Initializes GCJ.problems and GCJ.io from Django parameters.
+     * Also initializes the two user specific variables GCJ.isQualified and
+     * GCJ.lastClarSeenTime.
+     * This is the first function called once from GCJ.main().
+     */
+    GCJ.initContestVariables = function () {
+      // Convert Django's 'contest' to 'GCJ.contest'.
+      GCJ.contest.id = "32014";
+      GCJ.contest.name = "Code Jam Beta 2008";
+      GCJ.contest.version = 0;
+      
+        GCJ.contest.version = 5;
+      
+      GCJ.contest.start_int = 1208368800;
+      GCJ.contest.running = false;
+      GCJ.base_url = '/codejam/contest';
+      GCJ.scoreboardLink = ('<a target="new"' +
+                            'href="scoreboard?c=32014"' +
+                            '>Contest scoreboard</a>');
+    }
+
+    /**
+     * Returns the current splash page.
+     */
+    GCJ.getSplashPage = function () {
+      return "/codejam";
+    };
+  //--></script>
+</head>
+
+<body onload="GCJ.main()">
+
+<div id="logo-div">
+  <a href="http://code.google.com/codejam/">
+    <img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/logo_image4.gif" id="logo" alt="Google Code Jam">
+  </a>
+</div>
+
+<div>
+
+<div id="dsb-page-body">
+
+<div id="left-panel">
+  <div class="v-divider"></div>
+  <div class="v-divider"></div>
+  <div class="v-divider"></div>
+  <!-- Problem Selection Panel -->
+  <div id="dsb-contest-title">Code Jam Beta 2008</div>
+  <hr class="dsb-hr">
+  <div id="dsb-problem-selection-area">
+    <div style="display: block;" id="dsb-problem-selection-list" class="after-start-only">
+    <div><div id="dsb-problem-tab0" class="dsb-problem-tab-close" tabindex="0" role="button">  <div id="dsb-problem-title0" class="dynamic-link">A. Triangle Trilemma  </div></div></div><div><div id="dsb-problem-tab1" class="dsb-problem-tab-close" tabindex="0" role="button">  <div id="dsb-problem-title1" class="dynamic-link">B. The Price is Wrong  </div></div></div><div><div id="dsb-problem-tab2" class="dsb-problem-tab-close" tabindex="0" role="button">  <div id="dsb-problem-title2" class="dynamic-link">C. Random Route  </div></div></div><div><div id="dsb-problem-tab3" class="dsb-problem-tab-open" tabindex="0" role="button">  <div id="dsb-problem-title3" class="dynamic-link">D. Hexagon Game  </div></div></div></div>
+    <div style="display: none;" id="dsb-problem-selection-list-pre-contest" class="dsb-pre-contest-text before-start-only">
+      
+      The list of problems will appear here after the contest loads.
+      
+    </div>
+  </div>
+  <hr class="dsb-hr">
+  <div class="v-divider"></div>
+  <div class="v-divider"></div>
+  <div style="display: none;" id="dsb-analysis-button" class="dsb-analysis-tab-close" tabindex="0" role="button">
+    <div class="dynamic-link">
+       <div id="dsb-analysis-tab">
+         Contest Analysis
+       </div>
+    </div>
+  </div>
+  <div id="dsb-ask-question-area">
+    <div style="display: block;" id="dsb-ask-question-button" class="dsb-clar-tab-close" tabindex="0" role="button">
+      <div class="dynamic-link">
+        <div class="" id="dsb-ask-question-tab">Questions asked</div>
+      </div>
+    </div>
+    <div style="display: none;" class="dsb-pre-contest-text before-start-only">
+      
+      You'll be able to ask questions about the problems, and view your
+      submissions, here.
+      
+    </div>
+  </div>
+  <div style="display: none;" id="dsb-submissions-button" class="dsb-submissions-tab-close" tabindex="0" role="button">
+    <div class="dynamic-link">
+      <div id="dsb-submissions-tab">
+        View my submissions
+      </div>
+    </div>
+  </div>
+  <div class="v-divider"></div>
+  <div class="v-divider"></div>
+  <div class="dsb-mini-tab-wrapper">
+  <div id="dsb-status-div-container">
+    <div id="dsb-status-header-div" onmouseover="this.style.cursor='pointer'" onclick="GCJ.toggleStatusPanelVisibility();">
+      <img id="dsb-status-panel-button" src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/minus.gif">
+      &nbsp; Submissions
+    </div>
+    <div style="display: block;" id="dsb-status-tab" class="after-start-only">
+      <div style="display: none;" id="dsb-status-tab-loading-text" class="dsb-pre-contest-text">
+        Loading...
+      </div>
+    <div style="display: block;" id="dsb-status-tab-problems"><div><div id="dsb-problem-status-wrapper0" class="problem-status-wrapper">  <div class="dsb-status-problem-title">Triangle Trilemma</div><div><table class="problemStatus">  <tbody>    <tr class="inputSetStatus">      <td id="inputName0_0" class="inputName">10pt</td>      <td class="status">        <div id="selfStat0_0" class="dsb-mini-status-non-highlight">Not attempted</div>        <div style="display: block;" id="globalStat0_0" class="globalStat"><b>244/318 users</b> correct (77%)</div>      </td>    </tr>  </tbody></table></div><div><table class="problemStatus">  <tbody>    <tr class="inputSetStatus">      <td id="inputName0_1" class="inputName">10pt</td>      <td class="status">        <div id="selfStat0_1" class="dsb-mini-status-non-highlight">Not attempted</div>        <div style="display: block;" id="globalStat0_1" class="globalStat"><b>200/260 users</b> correct (77%)</div>      </td>    </tr>  </tbody></table></div></div></div><div><div id="dsb-problem-status-wrapper1" class="problem-status-wrapper">  <div class="dsb-status-problem-title">The Price is Wrong</div><div><table class="problemStatus">  <tbody>    <tr class="inputSetStatus">      <td id="inputName1_0" class="inputName">15pt</td>      <td class="status">        <div id="selfStat1_0" class="dsb-mini-status-non-highlight">Not attempted</div>        <div style="display: block;" id="globalStat1_0" class="globalStat"><b>110/175 users</b> correct (63%)</div>      </td>    </tr>  </tbody></table></div><div><table class="problemStatus">  <tbody>    <tr class="inputSetStatus">      <td id="inputName1_1" class="inputName">25pt</td>      <td class="status">        <div id="selfStat1_1" class="dsb-mini-status-non-highlight">Not attempted</div>        <div style="display: block;" id="globalStat1_1" class="globalStat"><b>67/96 users</b> correct (70%)</div>      </td>    </tr>  </tbody></table></div></div></div><div><div id="dsb-problem-status-wrapper2" class="problem-status-wrapper">  <div class="dsb-status-problem-title">Random Route</div><div><table class="problemStatus">  <tbody>    <tr class="inputSetStatus">      <td id="inputName2_0" class="inputName">30pt</td>      <td class="status">        <div id="selfStat2_0" class="dsb-mini-status-non-highlight">Not attempted</div>        <div style="display: block;" id="globalStat2_0" class="globalStat"><b>42/76 users</b> correct (55%)</div>      </td>    </tr>  </tbody></table></div><div><table class="problemStatus">  <tbody>    <tr class="inputSetStatus">      <td id="inputName2_1" class="inputName">30pt</td>      <td class="status">        <div id="selfStat2_1" class="dsb-mini-status-non-highlight">Not attempted</div>        <div style="display: block;" id="globalStat2_1" class="globalStat"><b>38/51 users</b> correct (75%)</div>      </td>    </tr>  </tbody></table></div></div></div><div><div id="dsb-problem-status-wrapper3" class="problem-status-wrapper">  <div class="dsb-status-problem-title">Hexagon Game</div><div><table class="problemStatus">  <tbody>    <tr class="inputSetStatus">      <td id="inputName3_0" class="inputName">25pt</td>      <td class="status">        <div id="selfStat3_0" class="dsb-mini-status-non-highlight">Not attempted</div>        <div style="display: block;" id="globalStat3_0" class="globalStat"><b>8/29 users</b> correct (28%)</div>      </td>    </tr>  </tbody></table></div><div><table class="problemStatus">  <tbody>    <tr class="inputSetStatus">      <td id="inputName3_1" class="inputName">45pt</td>      <td class="status">        <div id="selfStat3_1" class="dsb-mini-status-non-highlight">Not attempted</div>        <div style="display: block;" id="globalStat3_1" class="globalStat"><b>6/15 users</b> correct (40%)</div>      </td>    </tr>  </tbody></table></div></div></div></div></div>
+    <div style="display: none;" id="dsb-status-tab-pre-contest" class="dsb-pre-contest-text before-start-only">
+      
+      Statistics about the problems will appear here.  They'll include your
+      status on each problem, and other contestants' attempts.
+      
+    </div>
+  </div>
+  </div>
+  <div class="v-divider"></div>
+  <div class="v-divider"></div>
+  <!-- Mini Scoreboard -->
+  <div class="dsb-mini-tab-wrapper">
+    <div id="dsb-scoreboard-div">
+      <div id="dsb-scoreboard-header-div" onmouseover="this.style.cursor='pointer'" onclick="GCJ.toggleVisibility(
+              'dsb-scoreboard-table',
+              'dsb-scoreboard-panel-button',
+              '/codejam/contest/static/minus.gif',
+              '/codejam/contest/static/plus.gif')">
+          <img id="dsb-scoreboard-panel-button" src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/minus.gif">
+          &nbsp; Top Scores
+      </div>
+      <div style="display: block;" id="dsb-scoreboard-table-wrap" class="after-start-only"><table id="dsb-scoreboard-table"><tbody><tr class="dsb-scoreboard-row-even" id="sbRow_0" style="display: block;"><td class="dsb-name-td" id="sbName_0">malcin</td><td class="dsb-score-td" id="sbScore_0">190</td></tr><tr class="dsb-scoreboard-row-odd" id="sbRow_1" style="display: block;"><td class="dsb-name-td" id="sbName_1">marek.cygan</td><td class="dsb-score-td" id="sbScore_1">190</td></tr><tr class="dsb-scoreboard-row-even" id="sbRow_2" style="display: block;"><td class="dsb-name-td" id="sbName_2">SnapDragon</td><td class="dsb-score-td" id="sbScore_2">165</td></tr><tr class="dsb-scoreboard-row-odd" id="sbRow_3" style="display: block;"><td class="dsb-name-td" id="sbName_3">ardiankp</td><td class="dsb-score-td" id="sbScore_3">145</td></tr><tr class="dsb-scoreboard-row-even" id="sbRow_4" style="display: block;"><td class="dsb-name-td" id="sbName_4">Astein</td><td class="dsb-score-td" id="sbScore_4">130</td></tr><tr class="dsb-scoreboard-row-odd" id="sbRow_5" style="display: block;"><td class="dsb-name-td" id="sbName_5">rem</td><td class="dsb-score-td" id="sbScore_5">130</td></tr><tr class="dsb-scoreboard-row-even" id="sbRow_6" style="display: block;"><td class="dsb-name-td" id="sbName_6">RAVEman</td><td class="dsb-score-td" id="sbScore_6">120</td></tr><tr class="dsb-scoreboard-row-odd" id="sbRow_7" style="display: block;"><td class="dsb-name-td" id="sbName_7">yuhch123</td><td class="dsb-score-td" id="sbScore_7">120</td></tr><tr class="dsb-scoreboard-row-even" id="sbRow_8" style="display: block;"><td class="dsb-name-td" id="sbName_8">Lovro</td><td class="dsb-score-td" id="sbScore_8">120</td></tr><tr class="dsb-scoreboard-row-odd" id="sbRow_9" style="display: block;"><td class="dsb-name-td" id="sbName_9">lukasP</td><td class="dsb-score-td" id="sbScore_9">120</td></tr></tbody></table></div>
+      <div style="display: none;" id="dsb-scoreboard-tab-pre-contest" class="dsb-pre-contest-text before-start-only">
+        
+        The scores of the top 10 contestants will appear here, with a link to
+        the contest's scoreboard.
+        
+      </div>
+      <div class="dsb-mini-tab-link">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="right-panel">
+  <div style="visibility: hidden;" id="dsb-status-msg-wrapper" class="dsb-status-msg-wrapper" role="alert">
+    <div id="dsb-status-msg" class="dsb-status-msg">
+      <span id="dsb-status-msg-text">Loading problem information...</span>
+      <span style="display: none;" id="dsb-view-sub-link">View submissions.</span>
+    </div>
+  </div>
+
+  <div id="dsb-contest-title-bar">
+    <div id="dsb-rank-etc">
+      <span id="dsb-time-remaining">Practice Mode</span>
+      <span style="display: inline;" class="after-start-only-inline">
+        <span style="display: none;" id="dsb-current-rank-div">
+          Rank: <span id="dsb-current-rank-span">--</span>
+        </span>
+        <span style="display: none;" id="dsb-current-score-div">
+          Score: <span id="dsb-current-score-span">--</span>
+        </span>
+      </span>
+    </div>
+    <div id="dsb-title-links"><a target="new" href="http://code.google.com/codejam/contest/32014/scoreboard?c=32014">Contest scoreboard</a> | <a href="https://www.google.com/accounts/ServiceLogin?service=ah&amp;passive=true&amp;continue=https://appengine.google.com/_ah/conflogin%3Fcontinue%3Dhttp://code.google.com/codejam/contest/dashboard%253Fc%253D32014&amp;ltmpl=">Sign in</a></div>
+  </div>
+  <!-- Problem Statement -->
+  <div id="main-panel-border" class="dsb-blue-border">
+  <div id="dsb-border-inner">
+   <!-- Problem Title -->
+    <h3 id="dsb-problem-title-area">
+      <span style="display: none;" id="dsb-problem-title-div-pre-contest" class="problem-title before-start-only">
+        <span style="color:#666">Problem.</span>
+        The problem's name goes here.
+      </span>
+      <span style="display: block;" id="dsb-problem-title-div" class="problem-title after-start-only"><span style="color:#666">Problem D.</span> Hexagon Game</span>
+    </h3>
+
+    <div style="display: none;" class="dsb-content-pages before-start-only">
+      
+      We're now waiting for the contest to start.  Once the contest starts,
+      the problems will automatically load, and Problem A will display here.
+      You don't have to solve that problem first; you will be able to select
+      another problem from the list to the left.  Once you've solved one
+      problem, don't forget to work on the others!
+      
+    </div>
+
+    <div id="dsb-problem-pages"><div style="display: none;" class="dsb-content-pages" id="dsb-problem-page0"><!-- Problem Input File Selection --><div class="dsb-input-panel-text" id="dsb-input-panel-text0"><span style="color: #666666;">This
+ contest is open for practice.  You can try every problem as many times 
+as you like, though we won't keep track of which problems you solve.  
+Read the <a href="http://code.google.com/codejam/quickstart.html" target="_blank">Quick-Start Guide</a> to get started.</span></div><table><tbody id="dsb-input-form-table0"><tr><td class="dsb-input-table-description">Small input<br>10 points</td><td class="dsb-input-table-linktd"><div class="" id="dsb-action-box-wrap0-0"><div style="display: inline;" class="dsb-input-wrapper" id="dsb-input-wrapper0-0"><button style="display: inline;" id="dsb-input-start-button0-0" class="dsb-input-start-button">Solve A-small</button><span style="display: none;" id="dsb-input-link-plain0-0" class="dsb-input-link-span"><img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/file.gif" class="dsb-input-link-img"><span id="dsb-input-link-plain-text0-0" class="dsb-input-link-text">Download A-small-practice.in</span></span></div><span style="display: none;" id="dsb-input-table-caption0-0" class="dsb-input-table-caption"></span><span style="display: none;" id="dsb-resubmit-caption0-0" class="dsb-input-table-caption">Your submission was received. You can still <span class="dsb-input-link-text" id="dsb-resubmit-link0-0">resubmit</span> for <span id="dsb-resubmit-timer0-0"></span>.<br>Only your last submission counts. <span class="dsb-input-link-text" id="dsb-resubmit-view-sub-link0-0">View your last submission</span>.</span><div><div style="display: none;" id="dsb-submit-form-div0-0" class="dsb-submit-form-div"><div style="display:none"><b>Time Remaining:</b> <span id="io_timer_0"></span>&nbsp;&nbsp;</div><div style="display:none"><b>Input:</b> A-small-practice.in.</div><form id="submit-formio_timer_0" action="/codejam/contest/32014/dashboard/do" enctype="multipart/form-data" method="post"><input name="csrfmiddlewaretoken" value="ZTk1ZTI5NmFlMjNhYmJmZWFiZjk4YzlhNmVmYmI5MTN8fDE0MTAxNTUzMTEzNDE2NDE=" type="hidden"><div class="dsb-submit-form-separator">your output file:<input id="output-fileio_timer_0" name="answer" class="submitFormFile" type="file"></div><div style="display: none"><table class="dsb-source-code-table"><tbody><tr><td style="padding:0.4em 0.2em 0 0">source code:&nbsp;&nbsp;</td><td><div id="source-filesio_timer_0"><div id="input-file-divio_timer_0-0"><span id="source-fileio_timer_0-0"><input class="submitFormFile" name="source-file0" type="file"></span><span style="visibility: hidden;" class="dsb-submit-form-links" id="remove-source-fileio_timer_0-0">remove</span></div></div><span id="add-source-fileio_timer_0" class="dsb-submit-form-links">Add another file</span></td></tr></tbody></table></div><div class="dsb-submit-form-separator" style="color:gray">source file(s): &nbsp;&nbsp;&nbsp;not needed for the practice contest</div><div class="dsb-submit-form-separator" style="text-align:center"><input id="submit-buttonio_timer_0" value="Submit file" type="button">&nbsp;&nbsp;<input id="dsb-hide-submissionio_timer_0" value="Hide" type="button"></div><div id="source-file-namesio_timer_0"></div><input name="cmd" value="SubmitAnswer" type="hidden"><input name="problem" value="24438" type="hidden"><input name="input_id" value="0" type="hidden"><input name="num_source_files" id="num-source-filesio_timer_0" value="1" type="hidden"><input name="agent" value="website" type="hidden"></form></div></div></div></td></tr><tr><td class="dsb-input-table-description">Large input<br>10 points</td><td class="dsb-input-table-linktd"><div class="" id="dsb-action-box-wrap0-1"><div style="display: inline;" class="dsb-input-wrapper" id="dsb-input-wrapper0-1"><button style="display: inline;" id="dsb-input-start-button0-1" class="dsb-input-start-button">Solve A-large</button><span style="display: none;" id="dsb-input-link-plain0-1" class="dsb-input-link-span"><img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/file.gif" class="dsb-input-link-img"><span id="dsb-input-link-plain-text0-1" class="dsb-input-link-text">Download A-large-practice.in</span></span></div><span style="display: none;" id="dsb-input-table-caption0-1" class="dsb-input-table-caption"></span><span style="display: none;" id="dsb-resubmit-caption0-1" class="dsb-input-table-caption">Your submission was received. You can still <span class="dsb-input-link-text" id="dsb-resubmit-link0-1">resubmit</span> for <span id="dsb-resubmit-timer0-1"></span>.<br>Only your last submission counts. <span class="dsb-input-link-text" id="dsb-resubmit-view-sub-link0-1">View your last submission</span>.</span><div><div style="display: none;" id="dsb-submit-form-div0-1" class="dsb-submit-form-div"><div style="display:none"><b>Time Remaining:</b> <span id="io_timer_1"></span>&nbsp;&nbsp;</div><div style="display:none">You may resubmit this multiple times within the remaining time-frame. Only your last submission will count.</div><form id="submit-formio_timer_1" action="/codejam/contest/32014/dashboard/do" enctype="multipart/form-data" method="post"><input name="csrfmiddlewaretoken" value="ZTk1ZTI5NmFlMjNhYmJmZWFiZjk4YzlhNmVmYmI5MTN8fDE0MTAxNTUzMTEzNDE2NDE=" type="hidden"><div class="dsb-submit-form-separator">your output file:<input id="output-fileio_timer_1" name="answer" class="submitFormFile" type="file"></div><div style="display: none"><table class="dsb-source-code-table"><tbody><tr><td style="padding:0.4em 0.2em 0 0">source code:&nbsp;&nbsp;</td><td><div id="source-filesio_timer_1"><div id="input-file-divio_timer_1-0"><span id="source-fileio_timer_1-0"><input class="submitFormFile" name="source-file0" type="file"></span><span style="visibility: hidden;" class="dsb-submit-form-links" id="remove-source-fileio_timer_1-0">remove</span></div></div><span id="add-source-fileio_timer_1" class="dsb-submit-form-links">Add another file</span></td></tr></tbody></table></div><div class="dsb-submit-form-separator" style="color:gray">source file(s): &nbsp;&nbsp;&nbsp;not needed for the practice contest</div><div class="dsb-submit-form-separator" style="text-align:center"><input id="submit-buttonio_timer_1" value="Submit file" type="button">&nbsp;&nbsp;<input id="dsb-hide-submissionio_timer_1" value="Hide" type="button"></div><div id="source-file-namesio_timer_1"></div><input name="cmd" value="SubmitAnswer" type="hidden"><input name="problem" value="24438" type="hidden"><input name="input_id" value="1" type="hidden"><input name="num_source_files" id="num-source-filesio_timer_1" value="1" type="hidden"><input name="agent" value="website" type="hidden"></form></div></div></div></td></tr></tbody></table><!-- Problem Statement --><div id="dsb-problem-content-div0" class="dsb-problem-content-div"><p class="problem-item">Problem</p>
+
+<p>You're interested in writing a program to classify triangles. Triangles can
+be classified according to their internal angles. If one of the internal angles
+is exactly 90 degrees, then that triangle is known as a "right" triangle. If one
+of the internal angles is greater than 90 degrees, that triangle is known as an
+"obtuse" triangle. Otherwise, all the internal angles are less than 90 degrees
+and the triangle is known as an "acute" triangle.</p>
+
+<p>Triangles can also be classified according to the relative lengths of their
+sides. In a "scalene" triangle, all three sides have different lengths. In an
+"isosceles" triangle, two of the sides are of equal length. (If all three sides
+have the same length, the triangle is known as an "equilateral" triangle, but
+you can ignore this case since there will be no equilateral triangles in the
+input data.)</p>
+
+<p>Your program must determine, for each set of three points, whether or not
+those points form a triangle. If the three points are not distinct, or the three
+points are collinear, then those points do not form a valid triangle. (Another
+way is to calculate the area of the triangle; valid triangles must have non-zero
+area.) Otherwise, your program will classify the triangle as one of "acute",
+"obtuse", or "right", and one of "isosceles" or "scalene".</p>
+
+<p class="problem-item">Input</p>
+<p>The first line of input gives the number of cases, <b>N</b>.
+<b>N</b> test cases follow. Each case is a line formatted as</p>
+<pre>x1 y1 x2 y2 x3 y3</pre>
+
+<p class="problem-item">Output</p>
+<p>For each test case, output one line containing "Case #<b>x</b>: "
+followed by one of these strings:
+</p><ul>
+<li><code>isosceles acute triangle</code></li>
+<li><code>isosceles obtuse triangle</code></li>
+<li><code>isosceles right triangle</code></li>
+<li><code>scalene acute triangle</code></li>
+<li><code>scalene obtuse triangle</code></li>
+<li><code>scalene right triangle</code></li>
+<li><code>not a triangle</code></li>
+</ul><p></p>
+
+<p class="problem-item">Limits</p>
+<p>
+1 ≤ <b>N</b> ≤ 100,<br>
+<b>x1</b>, <b>y1</b>, <b>x2</b>, <b>y2</b>, <b>x3</b>, <b>y3</b> will be integers.
+</p>
+<p class="problem-item">Small dataset</p>
+<p>
+0 ≤ <b>x1</b>, <b>y1</b>, <b>x2</b>, <b>y2</b>, <b>x3</b>, <b>y3</b> ≤ 9<br>
+</p>
+<p class="problem-item">Large dataset</p>
+<p>
+-1000 ≤ <b>x1</b>, <b>y1</b>, <b>x2</b>, <b>y2</b>, <b>x3</b>, <b>y3</b> ≤ 1000<br>
+</p>
+
+<p class="problem-item">Sample</p>
+<div class="problem-io-wrapper">
+<table>
+<tbody><tr>
+<td>
+<br>
+<span class="problem-item-gray">Input<br></span>
+</td>
+<td>
+<br>
+<span class="problem-item-gray">Output<br></span>
+</td>
+</tr>
+<tr>
+<td>
+<code>
+8<br>
+0 0 0 4 1 2<br>
+1 1 1 4 3 2<br>
+2 2 2 4 4 3<br>
+3 3 3 4 5 3<br>
+4 4 4 5 5 6<br>
+5 5 5 6 6 5<br>
+6 6 6 7 6 8<br>
+7 7 7 7 7 7<br>
+<br>
+</code>
+</td><td>
+<code>
+Case #1: isosceles obtuse triangle<br>
+Case #2: scalene acute triangle<br>
+Case #3: isosceles acute triangle<br>
+Case #4: scalene right triangle<br>
+Case #5: scalene obtuse triangle<br>
+Case #6: isosceles right triangle<br>
+Case #7: not a triangle<br>
+Case #8: not a triangle<br>
+</code>
+</td>
+</tr></tbody></table></div>
+
+</div></div><div class="dsb-content-pages" id="dsb-problem-page1"><!-- Problem Input File Selection --><div class="dsb-input-panel-text" id="dsb-input-panel-text1"><span style="color: #666666;">This
+ contest is open for practice.  You can try every problem as many times 
+as you like, though we won't keep track of which problems you solve.  
+Read the <a href="http://code.google.com/codejam/quickstart.html" target="_blank">Quick-Start Guide</a> to get started.</span></div><table><tbody id="dsb-input-form-table1"><tr><td class="dsb-input-table-description">Small input<br>15 points</td><td class="dsb-input-table-linktd"><div class="" id="dsb-action-box-wrap1-0"><div style="display: inline;" class="dsb-input-wrapper" id="dsb-input-wrapper1-0"><button style="display: inline;" id="dsb-input-start-button1-0" class="dsb-input-start-button">Solve B-small</button><span style="display: none;" id="dsb-input-link-plain1-0" class="dsb-input-link-span"><img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/file.gif" class="dsb-input-link-img"><span id="dsb-input-link-plain-text1-0" class="dsb-input-link-text">Download B-small-practice.in</span></span></div><span style="display: none;" id="dsb-input-table-caption1-0" class="dsb-input-table-caption"></span><span style="display: none;" id="dsb-resubmit-caption1-0" class="dsb-input-table-caption">Your submission was received. You can still <span class="dsb-input-link-text" id="dsb-resubmit-link1-0">resubmit</span> for <span id="dsb-resubmit-timer1-0"></span>.<br>Only your last submission counts. <span class="dsb-input-link-text" id="dsb-resubmit-view-sub-link1-0">View your last submission</span>.</span><div><div style="display: none;" id="dsb-submit-form-div1-0" class="dsb-submit-form-div"><div style="display:none"><b>Time Remaining:</b> <span id="io_timer_2"></span>&nbsp;&nbsp;</div><div style="display:none"><b>Input:</b> B-small-practice.in.</div><form id="submit-formio_timer_2" action="/codejam/contest/32014/dashboard/do" enctype="multipart/form-data" method="post"><input name="csrfmiddlewaretoken" value="ZTk1ZTI5NmFlMjNhYmJmZWFiZjk4YzlhNmVmYmI5MTN8fDE0MTAxNTUzMTEzNDE2NDE=" type="hidden"><div class="dsb-submit-form-separator">your output file:<input id="output-fileio_timer_2" name="answer" class="submitFormFile" type="file"></div><div style="display: none"><table class="dsb-source-code-table"><tbody><tr><td style="padding:0.4em 0.2em 0 0">source code:&nbsp;&nbsp;</td><td><div id="source-filesio_timer_2"><div id="input-file-divio_timer_2-0"><span id="source-fileio_timer_2-0"><input class="submitFormFile" name="source-file0" type="file"></span><span style="visibility: hidden;" class="dsb-submit-form-links" id="remove-source-fileio_timer_2-0">remove</span></div></div><span id="add-source-fileio_timer_2" class="dsb-submit-form-links">Add another file</span></td></tr></tbody></table></div><div class="dsb-submit-form-separator" style="color:gray">source file(s): &nbsp;&nbsp;&nbsp;not needed for the practice contest</div><div class="dsb-submit-form-separator" style="text-align:center"><input id="submit-buttonio_timer_2" value="Submit file" type="button">&nbsp;&nbsp;<input id="dsb-hide-submissionio_timer_2" value="Hide" type="button"></div><div id="source-file-namesio_timer_2"></div><input name="cmd" value="SubmitAnswer" type="hidden"><input name="problem" value="24477" type="hidden"><input name="input_id" value="0" type="hidden"><input name="num_source_files" id="num-source-filesio_timer_2" value="1" type="hidden"><input name="agent" value="website" type="hidden"></form></div></div></div></td></tr><tr><td class="dsb-input-table-description">Large input<br>25 points</td><td class="dsb-input-table-linktd"><div class="" id="dsb-action-box-wrap1-1"><div style="display: inline;" class="dsb-input-wrapper" id="dsb-input-wrapper1-1"><button style="display: inline;" id="dsb-input-start-button1-1" class="dsb-input-start-button">Solve B-large</button><span style="display: none;" id="dsb-input-link-plain1-1" class="dsb-input-link-span"><img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/file.gif" class="dsb-input-link-img"><span id="dsb-input-link-plain-text1-1" class="dsb-input-link-text">Download B-large-practice.in</span></span></div><span style="display: none;" id="dsb-input-table-caption1-1" class="dsb-input-table-caption"></span><span style="display: none;" id="dsb-resubmit-caption1-1" class="dsb-input-table-caption">Your submission was received. You can still <span class="dsb-input-link-text" id="dsb-resubmit-link1-1">resubmit</span> for <span id="dsb-resubmit-timer1-1"></span>.<br>Only your last submission counts. <span class="dsb-input-link-text" id="dsb-resubmit-view-sub-link1-1">View your last submission</span>.</span><div><div style="display: none;" id="dsb-submit-form-div1-1" class="dsb-submit-form-div"><div style="display:none"><b>Time Remaining:</b> <span id="io_timer_3"></span>&nbsp;&nbsp;</div><div style="display:none">You may resubmit this multiple times within the remaining time-frame. Only your last submission will count.</div><form id="submit-formio_timer_3" action="/codejam/contest/32014/dashboard/do" enctype="multipart/form-data" method="post"><input name="csrfmiddlewaretoken" value="ZTk1ZTI5NmFlMjNhYmJmZWFiZjk4YzlhNmVmYmI5MTN8fDE0MTAxNTUzMTEzNDE2NDE=" type="hidden"><div class="dsb-submit-form-separator">your output file:<input id="output-fileio_timer_3" name="answer" class="submitFormFile" type="file"></div><div style="display: none"><table class="dsb-source-code-table"><tbody><tr><td style="padding:0.4em 0.2em 0 0">source code:&nbsp;&nbsp;</td><td><div id="source-filesio_timer_3"><div id="input-file-divio_timer_3-0"><span id="source-fileio_timer_3-0"><input class="submitFormFile" name="source-file0" type="file"></span><span style="visibility: hidden;" class="dsb-submit-form-links" id="remove-source-fileio_timer_3-0">remove</span></div></div><span id="add-source-fileio_timer_3" class="dsb-submit-form-links">Add another file</span></td></tr></tbody></table></div><div class="dsb-submit-form-separator" style="color:gray">source file(s): &nbsp;&nbsp;&nbsp;not needed for the practice contest</div><div class="dsb-submit-form-separator" style="text-align:center"><input id="submit-buttonio_timer_3" value="Submit file" type="button">&nbsp;&nbsp;<input id="dsb-hide-submissionio_timer_3" value="Hide" type="button"></div><div id="source-file-namesio_timer_3"></div><input name="cmd" value="SubmitAnswer" type="hidden"><input name="problem" value="24477" type="hidden"><input name="input_id" value="1" type="hidden"><input name="num_source_files" id="num-source-filesio_timer_3" value="1" type="hidden"><input name="agent" value="website" type="hidden"></form></div></div></div></td></tr></tbody></table><!-- Problem Statement --><div id="dsb-problem-content-div1" class="dsb-problem-content-div"><p class="problem-item">Problem</p>
+
+<p>You're playing a game in which you try to guess the correct retail price of
+various products for sale. After guessing the price of each product in a list,
+you are shown the same list of products sorted by their actual prices, from
+least to most expensive. (No two products cost the same amount.) Based on this
+ordering, you are given a single chance to change one or more of your
+guesses.</p>
+
+<p>Your program should output the smallest set of products such that, if you
+change your prices for those products, the ordering of your guesses will be
+consistent with the correct ordering of the product list. The products in the
+returned set should be listed in alphabetical order. If there are multiple
+smallest sets, output the set which occurs first lexicographically.</p>
+
+<p>For example, assume these are your initial guesses:</p>
+
+<ul><li><code>code = $20</code></li>
+<li><code>jam = $15</code></li>
+<li><code>foo = $40</code></li>
+<li><code>bar = $30</code></li>
+<li><code>google = $60</code></li></ul>
+
+<p>If the correct ordering is <code>code jam foo bar google</code>, then you
+would need to change two of your prices in order to match the correct ordering.
+You might change one guess to read <code>jam = $30</code> and another guess to
+read <code>bar = $50</code>, which would match the correct ordering and produce
+the output set <code>bar jam</code>. However, the output set
+<code>bar code</code> comes before <code>bar jam</code> lexicographically, and
+you can match the correct ordering by changing your guesses for these items as
+well.</p>
+
+<p class="problem-item">Input</p>
+<p>The first line of input gives the number of cases, <b>N</b>.
+<b>N</b> test cases follow. Each case consists of two lines. The first line
+contains the list of products, space separated, sorted from least to most
+expensive. Each product's name will consist of only lowercase letters and
+underscores. There will be no duplicate products in the list. The second line
+contains your initial guesses for each product in the list, respectively. All
+guesses will be integers between 1 and 100, inclusive. The number of guesses
+will be equal to the number of products, and no two guesses will be the same.
+The guesses will be space separated. (Note that although the initial guesses all
+happen to be integers, you are allowed to change your guesses to any amounts,
+not just integers.)</p>
+
+<p class="problem-item">Output</p>
+<p>For each test case, output one line containing "Case #<b>x</b>: "
+followed by the set of products for which you must change your prices. The
+products should be in alphabetical order and space separated. The constraints
+guarantee that you will need to change the price of at least one product for
+each test case.</p>
+
+<p class="problem-item">Limits</p>
+<p>
+1 ≤ <b>N</b> ≤ 100.
+</p>
+<p class="problem-item">Small dataset</p>
+<p>
+2 ≤ number of products in list ≤ 8<br>
+</p>
+<p class="problem-item">Large dataset</p>
+<p>
+2 ≤ number of products in list ≤ 64<br>
+</p>
+
+<p class="problem-item">Sample</p>
+<div class="problem-io-wrapper">
+<table>
+<tbody><tr>
+<td>
+<br>
+<span class="problem-item-gray">Input<br></span>
+</td>
+<td>
+<br>
+<span class="problem-item-gray">Output<br></span>
+</td>
+</tr>
+<tr>
+<td>
+<code>
+1<br>
+code jam foo bar google<br>
+20 15 40 30 60<br>
+<br>
+</code>
+</td><td>
+<code>
+Case #1: bar code<br>
+</code>
+</td>
+</tr></tbody></table></div>
+
+</div></div><div class="dsb-content-pages" id="dsb-problem-page2"><!-- Problem Input File Selection --><div class="dsb-input-panel-text" id="dsb-input-panel-text2"><span style="color: #666666;">This
+ contest is open for practice.  You can try every problem as many times 
+as you like, though we won't keep track of which problems you solve.  
+Read the <a href="http://code.google.com/codejam/quickstart.html" target="_blank">Quick-Start Guide</a> to get started.</span></div><table><tbody id="dsb-input-form-table2"><tr><td class="dsb-input-table-description">Small input<br>30 points</td><td class="dsb-input-table-linktd"><div class="" id="dsb-action-box-wrap2-0"><div style="display: inline;" class="dsb-input-wrapper" id="dsb-input-wrapper2-0"><button style="display: inline;" id="dsb-input-start-button2-0" class="dsb-input-start-button">Solve C-small</button><span style="display: none;" id="dsb-input-link-plain2-0" class="dsb-input-link-span"><img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/file.gif" class="dsb-input-link-img"><span id="dsb-input-link-plain-text2-0" class="dsb-input-link-text">Download C-small-practice.in</span></span></div><span style="display: none;" id="dsb-input-table-caption2-0" class="dsb-input-table-caption"></span><span style="display: none;" id="dsb-resubmit-caption2-0" class="dsb-input-table-caption">Your submission was received. You can still <span class="dsb-input-link-text" id="dsb-resubmit-link2-0">resubmit</span> for <span id="dsb-resubmit-timer2-0"></span>.<br>Only your last submission counts. <span class="dsb-input-link-text" id="dsb-resubmit-view-sub-link2-0">View your last submission</span>.</span><div><div style="display: none;" id="dsb-submit-form-div2-0" class="dsb-submit-form-div"><div style="display:none"><b>Time Remaining:</b> <span id="io_timer_4"></span>&nbsp;&nbsp;</div><div style="display:none"><b>Input:</b> C-small-practice.in.</div><form id="submit-formio_timer_4" action="/codejam/contest/32014/dashboard/do" enctype="multipart/form-data" method="post"><input name="csrfmiddlewaretoken" value="ZTk1ZTI5NmFlMjNhYmJmZWFiZjk4YzlhNmVmYmI5MTN8fDE0MTAxNTUzMTEzNDE2NDE=" type="hidden"><div class="dsb-submit-form-separator">your output file:<input id="output-fileio_timer_4" name="answer" class="submitFormFile" type="file"></div><div style="display: none"><table class="dsb-source-code-table"><tbody><tr><td style="padding:0.4em 0.2em 0 0">source code:&nbsp;&nbsp;</td><td><div id="source-filesio_timer_4"><div id="input-file-divio_timer_4-0"><span id="source-fileio_timer_4-0"><input class="submitFormFile" name="source-file0" type="file"></span><span style="visibility: hidden;" class="dsb-submit-form-links" id="remove-source-fileio_timer_4-0">remove</span></div></div><span id="add-source-fileio_timer_4" class="dsb-submit-form-links">Add another file</span></td></tr></tbody></table></div><div class="dsb-submit-form-separator" style="color:gray">source file(s): &nbsp;&nbsp;&nbsp;not needed for the practice contest</div><div class="dsb-submit-form-separator" style="text-align:center"><input id="submit-buttonio_timer_4" value="Submit file" type="button">&nbsp;&nbsp;<input id="dsb-hide-submissionio_timer_4" value="Hide" type="button"></div><div id="source-file-namesio_timer_4"></div><input name="cmd" value="SubmitAnswer" type="hidden"><input name="problem" value="24452" type="hidden"><input name="input_id" value="0" type="hidden"><input name="num_source_files" id="num-source-filesio_timer_4" value="1" type="hidden"><input name="agent" value="website" type="hidden"></form></div></div></div></td></tr><tr><td class="dsb-input-table-description">Large input<br>30 points</td><td class="dsb-input-table-linktd"><div class="" id="dsb-action-box-wrap2-1"><div style="display: inline;" class="dsb-input-wrapper" id="dsb-input-wrapper2-1"><button style="display: inline;" id="dsb-input-start-button2-1" class="dsb-input-start-button">Solve C-large</button><span style="display: none;" id="dsb-input-link-plain2-1" class="dsb-input-link-span"><img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/file.gif" class="dsb-input-link-img"><span id="dsb-input-link-plain-text2-1" class="dsb-input-link-text">Download C-large-practice.in</span></span></div><span style="display: none;" id="dsb-input-table-caption2-1" class="dsb-input-table-caption"></span><span style="display: none;" id="dsb-resubmit-caption2-1" class="dsb-input-table-caption">Your submission was received. You can still <span class="dsb-input-link-text" id="dsb-resubmit-link2-1">resubmit</span> for <span id="dsb-resubmit-timer2-1"></span>.<br>Only your last submission counts. <span class="dsb-input-link-text" id="dsb-resubmit-view-sub-link2-1">View your last submission</span>.</span><div><div style="display: none;" id="dsb-submit-form-div2-1" class="dsb-submit-form-div"><div style="display:none"><b>Time Remaining:</b> <span id="io_timer_5"></span>&nbsp;&nbsp;</div><div style="display:none">You may resubmit this multiple times within the remaining time-frame. Only your last submission will count.</div><form id="submit-formio_timer_5" action="/codejam/contest/32014/dashboard/do" enctype="multipart/form-data" method="post"><input name="csrfmiddlewaretoken" value="ZTk1ZTI5NmFlMjNhYmJmZWFiZjk4YzlhNmVmYmI5MTN8fDE0MTAxNTUzMTEzNDE2NDE=" type="hidden"><div class="dsb-submit-form-separator">your output file:<input id="output-fileio_timer_5" name="answer" class="submitFormFile" type="file"></div><div style="display: none"><table class="dsb-source-code-table"><tbody><tr><td style="padding:0.4em 0.2em 0 0">source code:&nbsp;&nbsp;</td><td><div id="source-filesio_timer_5"><div id="input-file-divio_timer_5-0"><span id="source-fileio_timer_5-0"><input class="submitFormFile" name="source-file0" type="file"></span><span style="visibility: hidden;" class="dsb-submit-form-links" id="remove-source-fileio_timer_5-0">remove</span></div></div><span id="add-source-fileio_timer_5" class="dsb-submit-form-links">Add another file</span></td></tr></tbody></table></div><div class="dsb-submit-form-separator" style="color:gray">source file(s): &nbsp;&nbsp;&nbsp;not needed for the practice contest</div><div class="dsb-submit-form-separator" style="text-align:center"><input id="submit-buttonio_timer_5" value="Submit file" type="button">&nbsp;&nbsp;<input id="dsb-hide-submissionio_timer_5" value="Hide" type="button"></div><div id="source-file-namesio_timer_5"></div><input name="cmd" value="SubmitAnswer" type="hidden"><input name="problem" value="24452" type="hidden"><input name="input_id" value="1" type="hidden"><input name="num_source_files" id="num-source-filesio_timer_5" value="1" type="hidden"><input name="agent" value="website" type="hidden"></form></div></div></div></td></tr></tbody></table><!-- Problem Statement --><div id="dsb-problem-content-div2" class="dsb-problem-content-div"><p class="problem-item">Problem</p>
+
+<p>Where do you want to go today, and how do you want to get there? You decide
+to choose the answer to both questions at random.</p>
+
+<p>You will be given a list of roads. Each road connects one city to another
+city (all roads are one-way), and each road takes a certain amount of time to
+drive. You will also be given a starting city. Consider all cities that you're
+able to drive to, not including your starting city, and choose one of them at
+random with uniform probability to be your destination. Now consider every
+fastest route from your starting city to your destination city, and choose one
+of these routes at random with uniform probability. This will be the route on
+which you end up driving.</p>
+
+<p>For each road in the input, your program must output the probability that you
+will end up driving on that road, given the behavior outlined above.</p>
+
+<p class="problem-item">Input</p>
+<p>The first line of input gives the number of cases, <b>N</b>.
+<b>N</b> test cases follow. Each case begins with a line formatted as</p>
+<pre>num_roads starting_city</pre>
+<p>This will be followed by <b>num_roads</b> lines, each formatted as</p>
+<pre>city1 city2 time</pre>
+<p>Each line represents a one-way road that starts at <code>city1</code> and
+ends at <code>city2</code>, and takes <code>time</code> hours to drive. All
+cities will be formatted as strings consisting of only lowercase letters and
+underscores. For each road, <code>city1</code> will not be equal to
+<code>city2</code>, and <code>time</code> will be an integer between 1 and
+100000, inclusive. The starting city is guaranteed to appear as
+<code>city1</code> on at least one road; therefore, there will always be at
+least one possible destination (and at least one shortest route to that
+destination).</p>
+
+<p class="problem-item">Output</p>
+<p>For each test case, output one line containing "Case #<b>x</b>: "
+followed by the probability that you will drive on each road, in the same order
+that the roads were listed in the input. Probabilities should be space separated
+and formatted so there are exactly seven digits after the decimal point. Each
+probability must be within a distance of 1e-6 from the correct answer to be
+judged as correct.</p>
+
+<p class="problem-item">Limits</p>
+<p>
+1 ≤ <b>N</b> ≤ 100.
+</p>
+<p class="problem-item">Small dataset</p>
+<p>
+2 ≤ <b>num_roads</b> ≤ 25.
+</p>
+<p class="problem-item">Large dataset</p>
+<p>
+2 ≤ <b>num_roads</b> ≤ 50.
+</p>
+
+<p class="problem-item">Sample</p>
+<div class="problem-io-wrapper">
+<table>
+<tbody><tr>
+<td>
+<br>
+<span class="problem-item-gray">Input<br></span>
+</td>
+<td>
+<br>
+<span class="problem-item-gray">Output<br></span>
+</td>
+</tr>
+<tr>
+<td>
+<code>
+1<br>
+5&nbsp;san_francisco<br>
+san_francisco&nbsp;los_angeles&nbsp;6<br>
+los_angeles&nbsp;san_diego&nbsp;2<br>
+san_francisco&nbsp;san_diego&nbsp;8<br>
+los_angeles&nbsp;san_diego&nbsp;2<br>
+san_francisco&nbsp;los_angeles&nbsp;6<br>
+<br>
+</code>
+</td><td>
+<code>
+Case&nbsp;#1:&nbsp;0.4500000&nbsp;0.2000000&nbsp;0.1000000&nbsp;0.2000000&nbsp;0.4500000<br>
+</code>
+</td>
+</tr></tbody></table></div>
+
+</div></div><div style="display: block;" class="dsb-content-pages" id="dsb-problem-page3"><!-- Problem Input File Selection --><div class="dsb-input-panel-text" id="dsb-input-panel-text3"><span style="color: #666666;">This
+ contest is open for practice.  You can try every problem as many times 
+as you like, though we won't keep track of which problems you solve.  
+Read the <a href="http://code.google.com/codejam/quickstart.html" target="_blank">Quick-Start Guide</a> to get started.</span></div><table><tbody id="dsb-input-form-table3"><tr><td class="dsb-input-table-description">Small input<br>25 points</td><td class="dsb-input-table-linktd"><div class="" id="dsb-action-box-wrap3-0"><div style="display: inline;" class="dsb-input-wrapper" id="dsb-input-wrapper3-0"><button style="display: inline;" id="dsb-input-start-button3-0" class="dsb-input-start-button">Solve D-small</button><span style="display: none;" id="dsb-input-link-plain3-0" class="dsb-input-link-span"><img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/file.gif" class="dsb-input-link-img"><span id="dsb-input-link-plain-text3-0" class="dsb-input-link-text">Download D-small-practice.in</span></span></div><span style="display: none;" id="dsb-input-table-caption3-0" class="dsb-input-table-caption"></span><span style="display: none;" id="dsb-resubmit-caption3-0" class="dsb-input-table-caption">Your submission was received. You can still <span class="dsb-input-link-text" id="dsb-resubmit-link3-0">resubmit</span> for <span id="dsb-resubmit-timer3-0"></span>.<br>Only your last submission counts. <span class="dsb-input-link-text" id="dsb-resubmit-view-sub-link3-0">View your last submission</span>.</span><div><div style="display: none;" id="dsb-submit-form-div3-0" class="dsb-submit-form-div"><div style="display:none"><b>Time Remaining:</b> <span id="io_timer_6"></span>&nbsp;&nbsp;</div><div style="display:none"><b>Input:</b> D-small-practice.in.</div><form id="submit-formio_timer_6" action="/codejam/contest/32014/dashboard/do" enctype="multipart/form-data" method="post"><input name="csrfmiddlewaretoken" value="ZTk1ZTI5NmFlMjNhYmJmZWFiZjk4YzlhNmVmYmI5MTN8fDE0MTAxNTUzMTEzNDE2NDE=" type="hidden"><div class="dsb-submit-form-separator">your output file:<input id="output-fileio_timer_6" name="answer" class="submitFormFile" type="file"></div><div style="display: none"><table class="dsb-source-code-table"><tbody><tr><td style="padding:0.4em 0.2em 0 0">source code:&nbsp;&nbsp;</td><td><div id="source-filesio_timer_6"><div id="input-file-divio_timer_6-0"><span id="source-fileio_timer_6-0"><input class="submitFormFile" name="source-file0" type="file"></span><span style="visibility: hidden;" class="dsb-submit-form-links" id="remove-source-fileio_timer_6-0">remove</span></div></div><span id="add-source-fileio_timer_6" class="dsb-submit-form-links">Add another file</span></td></tr></tbody></table></div><div class="dsb-submit-form-separator" style="color:gray">source file(s): &nbsp;&nbsp;&nbsp;not needed for the practice contest</div><div class="dsb-submit-form-separator" style="text-align:center"><input id="submit-buttonio_timer_6" value="Submit file" type="button">&nbsp;&nbsp;<input id="dsb-hide-submissionio_timer_6" value="Hide" type="button"></div><div id="source-file-namesio_timer_6"></div><input name="cmd" value="SubmitAnswer" type="hidden"><input name="problem" value="24449" type="hidden"><input name="input_id" value="0" type="hidden"><input name="num_source_files" id="num-source-filesio_timer_6" value="1" type="hidden"><input name="agent" value="website" type="hidden"></form></div></div></div></td></tr><tr><td class="dsb-input-table-description">Large input<br>45 points</td><td class="dsb-input-table-linktd"><div class="" id="dsb-action-box-wrap3-1"><div style="display: inline;" class="dsb-input-wrapper" id="dsb-input-wrapper3-1"><button style="display: inline;" id="dsb-input-start-button3-1" class="dsb-input-start-button">Solve D-large</button><span style="display: none;" id="dsb-input-link-plain3-1" class="dsb-input-link-span"><img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/file.gif" class="dsb-input-link-img"><span id="dsb-input-link-plain-text3-1" class="dsb-input-link-text">Download D-large-practice.in</span></span></div><span style="display: none;" id="dsb-input-table-caption3-1" class="dsb-input-table-caption"></span><span style="display: none;" id="dsb-resubmit-caption3-1" class="dsb-input-table-caption">Your submission was received. You can still <span class="dsb-input-link-text" id="dsb-resubmit-link3-1">resubmit</span> for <span id="dsb-resubmit-timer3-1"></span>.<br>Only your last submission counts. <span class="dsb-input-link-text" id="dsb-resubmit-view-sub-link3-1">View your last submission</span>.</span><div><div style="display: none;" id="dsb-submit-form-div3-1" class="dsb-submit-form-div"><div style="display:none"><b>Time Remaining:</b> <span id="io_timer_7"></span>&nbsp;&nbsp;</div><div style="display:none">You may resubmit this multiple times within the remaining time-frame. Only your last submission will count.</div><form id="submit-formio_timer_7" action="/codejam/contest/32014/dashboard/do" enctype="multipart/form-data" method="post"><input name="csrfmiddlewaretoken" value="ZTk1ZTI5NmFlMjNhYmJmZWFiZjk4YzlhNmVmYmI5MTN8fDE0MTAxNTUzMTEzNDE2NDE=" type="hidden"><div class="dsb-submit-form-separator">your output file:<input id="output-fileio_timer_7" name="answer" class="submitFormFile" type="file"></div><div style="display: none"><table class="dsb-source-code-table"><tbody><tr><td style="padding:0.4em 0.2em 0 0">source code:&nbsp;&nbsp;</td><td><div id="source-filesio_timer_7"><div id="input-file-divio_timer_7-0"><span id="source-fileio_timer_7-0"><input class="submitFormFile" name="source-file0" type="file"></span><span style="visibility: hidden;" class="dsb-submit-form-links" id="remove-source-fileio_timer_7-0">remove</span></div></div><span id="add-source-fileio_timer_7" class="dsb-submit-form-links">Add another file</span></td></tr></tbody></table></div><div class="dsb-submit-form-separator" style="color:gray">source file(s): &nbsp;&nbsp;&nbsp;not needed for the practice contest</div><div class="dsb-submit-form-separator" style="text-align:center"><input id="submit-buttonio_timer_7" value="Submit file" type="button">&nbsp;&nbsp;<input id="dsb-hide-submissionio_timer_7" value="Hide" type="button"></div><div id="source-file-namesio_timer_7"></div><input name="cmd" value="SubmitAnswer" type="hidden"><input name="problem" value="24449" type="hidden"><input name="input_id" value="1" type="hidden"><input name="num_source_files" id="num-source-filesio_timer_7" value="1" type="hidden"><input name="agent" value="website" type="hidden"></form></div></div></div></td></tr></tbody></table><!-- Problem Statement --><div id="dsb-problem-content-div3" class="dsb-problem-content-div"><p class="problem-item">Problem</p>
+
+<p>You are playing a game on a hexagonal board of size <b>S</b>. The middle row
+is composed of <b>S</b> hexagons, and the top and bottom rows each have
+(<b>S</b> + 1) / 2 hexagons. (<b>S</b> will be odd.) The hexagons are numbered
+starting with 1 in the upper left, and increasing left-to-right and
+top-to-bottom. Here is a hexagonal board of size <b>S</b>=5:</p>
+
+<img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/hexagon.png">
+
+<p>The game starts with <b>S</b> checkers on the board. Multiple checkers might
+start in the same position. Each checker also has an associated integer value
+between 0 and 50, inclusive. A turn consists of choosing a checker and moving it
+to an adjacent position, which increments your score by the value of that
+checker. Checkers cannot move off the board. Each position can contain any
+number of checkers at the same time.</p>
+
+<p>The game ends when all the checkers are lined up in a straight row, with
+exactly one checker per hexagon. There are three possible ending configurations
+on any board. For <b>S</b>=5, the game will end when checkers are in positions
+(1, 5, 10, 15, 19), or in positions (3, 6, 10, 14, 17), or in positions (8, 9,
+10, 11, 12). Your program must output the smallest possible score of a finished
+game.</p>
+
+<p>For example, assume the checkers start in positions (1, 2, 5, 15, 19). The
+checker in position 1 has a value of 1, the checkers in positions 2 and 5 have
+values of 3, and the checkers in positions 15 and 19 have values of 0. You could
+move the checker from position 1 into position 5 and then position 10. Both of
+these moves add one point to your score. Then you could move the checker from
+position 2 into position 1, adding three points to your score. This game would
+end with a score of 5, which is the lowest possible score for this starting
+configuration.</p>
+
+<p class="problem-item">Input</p>
+<p>The first line of input gives the number of cases, <b>N</b>.
+<b>N</b> test cases follow. Each case consists of two lines. The first line
+contains the starting positions of the checkers, space separated. The second
+line contains the values of each checker, respectively, space separated.</p>
+
+<p class="problem-item">Output</p>
+<p>For each test case, output one line containing "Case #<b>x</b>: "
+followed by the minimum possible score of a finished game.</p>
+
+<p class="problem-item">Limits</p>
+<p>
+1 ≤ <b>N</b> ≤ 100.
+</p>
+<p class="problem-item">Small dataset</p>
+<p>
+3 ≤ <b>S</b> ≤ 15; <b>S</b> is odd.<br>
+</p>
+<p class="problem-item">Large dataset</p>
+<p>
+3 ≤ <b>S</b> ≤ 75; <b>S</b> is odd.<br>
+</p>
+
+<p class="problem-item">Sample</p>
+<div class="problem-io-wrapper">
+<table>
+<tbody><tr>
+<td>
+<br>
+<span class="problem-item-gray">Input<br></span>
+</td>
+<td>
+<br>
+<span class="problem-item-gray">Output<br></span>
+</td>
+</tr>
+<tr>
+<td>
+<code>
+1<br>
+1 2 5 15 19<br>
+1 3 3 0 0<br>
+<br>
+</code>
+</td><td>
+<code>
+Case #1: 5<br>
+</code>
+</td>
+</tr></tbody></table></div>
+
+</div></div></div>
+
+    <div id="dsb-analysis-page" class="dsb-content-pages"></div>
+
+    <div id="dsb-clarification-page" class="dsb-content-pages">
+      <!-- The clarifications table -->
+      <div id="clarTableDiv" class="clarTableWrapper"></div><div>
+        <table style="display: none;" id="dsb-clarification-table">
+          <colgroup span="9">
+            <col width="16%"><col width="2%">
+            <col width="10%"><col width="2%">
+            <col width="28%"><col width="2%">
+            <col width="10%"><col width="2%">
+            <col width="28%">
+          </colgroup>
+          <thead>
+            <tr>
+            <th>Category</th><th>&nbsp;</th>
+            <th class="clarTimeColumn">Asked</th><th>&nbsp;</th>
+            <th>Question</th><th>&nbsp;</th>
+            <th class="clarTimeColumn">Answered</th><th>&nbsp;</th>
+            <th>Answer</th>
+            </tr>
+          </thead>
+          <tbody id="dsb-clarification-tbody"></tbody>
+        </table>
+      </div>
+      <div style="display: none;" id="dsb-submit-clarification">
+        <!-- The link to ask a clarification -->
+        <div style="padding: 0.5em 0 0.3em 0;">
+          <b>Ask a question:</b>
+        </div>
+        <!-- The form for asking clarification -->
+        <div>
+          <form onsubmit="return GCJ.submitClarification(this);"><div style="display:none;"><input name="csrfmiddlewaretoken" value="ZjJlMWFlNWE1NzI3MzllNTQ0MDBmMjk4Njc1MzIwZGR8fDE0MTAxNTUzMDU5NjM2Mzk=" type="hidden"></div>
+            <div><textarea rows="5" cols="60" name="q"></textarea></div>
+            <div style="padding-top: 0.3em">
+              <select id="dsb-clarification-problem-select" name="problem">
+                <option value="_" selected="selected">[General]</option>
+              <option value="24438">A. Triangle Trilemma</option><option value="24477">B. The Price is Wrong</option><option value="24452">C. Random Route</option><option value="24449">D. Hexagon Game</option></select>
+              &nbsp;
+              <input id="dsb-submit-clarification-button" value="Ask" type="submit">
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Too many pending clarifications -->
+      <div id="dsb-cannot-ask-question-text" style="font-weight: bold; padding: 0.5em 0px 0.3em; display: block;">You cannot ask questions at this time. Please email us at codejam@google.com.</div>
+
+    </div>
+
+    <div id="dsb-submissions-page" class="dsb-content-pages">
+      <div id="dsb-submissions-status" class="dsb-sub-status-msg">
+        You have 0 submissions.
+      </div>
+      <table id="dsb-submissions-table" class="dsb-sub-main-table" style="display:none">
+      <thead>
+        <tr id="dsb-sub-main-table-header">
+          <th class="dsb-sub-row-id-width">ID</th>
+          <th class="dsb-sub-name-width">Problem</th>
+          <th class="dsb-sub-difficulty-width">Size</th>
+          <th class="dsb-sub-input-width">Input</th>
+          <th class="dsb-sub-output-width">Output</th>
+          <th class="dsb-sub-source-width">Solution</th>
+          <th class="dsb-sub-status-width">Status</th>
+          <th class="dsb-sub-time-width">Time</th>
+        </tr>
+      </thead>
+      <tbody id="dsb-submissions-rows">
+      </tbody>
+      </table>
+    </div>
+
+  </div>
+  </div>
+</div>
+
+</div>
+
+<div style="height: 3em; clear: both;"></div>
+
+
+
+
+<div id="footer">
+  
+  
+  <p>
+    
+    All problem statements, input data and contest analyses are
+    licensed under the
+    <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>.
+    
+  </p>
+  
+  <span id="copyright">© 2008-2013 Google</span>
+  <a href="http://www.google.com/">Google Home</a> -
+  <a href="http://code.google.com/codejam/terms.html">Terms and Conditions</a> -
+  <a href="http://www.google.com/intl/en/policies">Privacy Policies and Principles</a>
+  <br><br>
+  <a href="http://developers.google.com/appengine"><img src="Dashboard%20-%20Code%20Jam%20Beta%202008%20-%20Google%20Code%20Jam_files/appengine-noborder-120x30.gif"></a>
+  
+</div>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-21302427-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script');
+    ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+<div style="height: 1em">&nbsp;</div>
+
+<script type="text/javascript">
+GCJ.initHistory();
+</script><input value="s=p3" name="history_state0" id="history_state0" style="display:none" type="text">
+
+
+
+
+</div></body></html>
